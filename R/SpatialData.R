@@ -9,7 +9,11 @@
 #' shape shapes shape<- shapes<- shapeNames 
 #' table tables table<- tables<- tableNames 
 #' 
-#' @description ...
+#' @description
+#' The \code{SpatialData} class is a container for multi-modal spatial
+#' omics data following the OME-NGFF specification. It stores images, labels,
+#' points, shapes, and tables, each as named lists of their respective
+#' element types.
 #' 
 #' @param images list of \code{\link{ImageArray}}s
 #' @param labels list of \code{\link{LabelArray}}s

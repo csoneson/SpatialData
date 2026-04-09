@@ -1,6 +1,8 @@
 #' @name misc
 #' @title Miscellaneous `SpatialData` methods
-#' @description ...
+#' @description
+#' Miscellaneous methods including \code{show} for displaying
+#' \code{SpatialData} objects and their elements.
 #'
 #' @param object \code{\link{SpatialData}} object or one of its 
 #'   elements, i.e., an Image/LabelArray or Point/ShapeFrame.

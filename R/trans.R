@@ -77,10 +77,9 @@ setMethod("rotate", c("PointFrame", "numeric"), \(x, t, ...) {
     y <- .y <- .x <- NULL # R CMD check
     R <- .R(t*pi/180)
     x@data <- x@data |>
-        mutate(.x=x*R[1,1], .y=y*R[1,2]) |>
-        mutate(x=.x+.y) |>
-        mutate(.x=x*R[2,1], .y=y*R[2,2]) |>
-        mutate(y=.x+.y) |>
+        mutate(.x=x*R[1,1]+y*R[1,2]) |>
+        mutate(.y=x*R[2,1]+y*R[2,2]) |>
+        mutate(x=.x, y=.y) |>
         select(-.x, -.y)
     return(x)
 })

@@ -32,7 +32,6 @@ test_that("hasTable()", {
     expect_error(hasTable(setTable(x, i), i, name=TRUE)) # many
 })
 
-if (FALSE) {
 test_that("getTable()", {
     # invalid
     expect_error(getTable(x, 123))
@@ -60,7 +59,6 @@ test_that("getTable()", {
     expect_identical(t1, s)
     expect_identical(t2, s[, -.])
 })
-}
 
 test_that("setTable(),labels", {
     # invalid 'i'

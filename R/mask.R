@@ -1,7 +1,10 @@
 #' @name mask
 #' @title Masking
 #'
-#' @description ...
+#' @description
+#' Compute a summary table by masking one spatial element against another.
+#' For example, count points within circles, or summarize image intensities
+#' within label regions. The result is stored as a \code{table} in \code{x}.
 #' 
 #' @param x \code{\link{SpatialData}} object.
 #' @param i,j character string; names of elements to mask,

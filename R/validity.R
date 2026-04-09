@@ -38,12 +38,10 @@
 .validateImageArray <- function(object) {
     msg <- c()
     if (ni <- length(images(object))) {
-        for (i in seq_along(ni)) {
-            ai <- as.array(aperm(data(image(object,1))/255, perm=c(3,2,1)))
-            for (j in dim(ai)[3]) {
-                if (!all(vapply(ai[,,j], is.numeric, logical(1)))) {
-                    msg <- c(msg, paste0("Image ", i, " channel ", j, " not numeric"))
-                }
+        for (i in seq_len(ni)) {
+            ai <- as.array(aperm(data(image(object, i))/255, perm=c(3,2,1)))
+            if (!is.numeric(ai)) {
+                msg <- c(msg, paste0("Image ", i, " is not numeric"))
             }
         }
     }

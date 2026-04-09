@@ -1,12 +1,11 @@
-if (FALSE) {
 library(SingleCellExperiment)
 x <- file.path("extdata", "blobs.zarr")
 x <- system.file(x, package="SpatialData")
-x <- readSpatialData(x)
+x <- readSpatialData(x, anndataR=TRUE)
 
 # skirt base::table ambiguity
 sdtable <- SpatialData::table    
-`sdtable<-` <- `SpatialData::table<-`   
+`sdtable<-` <- SpatialData::`table<-`   
 sdtables <- SpatialData::tables
 
 fun <- c("image", "label", "shape", "point", "sdtable")
@@ -258,4 +257,3 @@ test_that("[,SpatialData", {
         element(y, 1, 1), 
         element(x, 1, .n(x)[1]))
 })
-}

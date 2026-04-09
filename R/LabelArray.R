@@ -25,7 +25,12 @@
 #' @return \code{LabelArray}
 #'
 #' @examples
-#' # TODO
+#' x <- file.path("extdata", "blobs.zarr")
+#' x <- system.file(x, package="SpatialData")
+#' x <- readSpatialData(x, tables=FALSE)
+#' (la <- label(x))
+#' dim(la)
+#' data(la)
 #'
 #' @importFrom S4Vectors metadata<-
 #' @importFrom methods new

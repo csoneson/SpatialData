@@ -200,6 +200,8 @@ readTable <- function(x) {
 readSpatialData <- function(x, 
     images=TRUE, labels=TRUE, points=TRUE, 
     shapes=TRUE, tables=TRUE, anndataR=TRUE) {
+    if (!dir.exists(x))
+        stop("path '", x, "' does not exist")
     if (!anndataR) tables <- FALSE # will do manually below
     args <- as.list(environment())[.LAYERS]
     skip <- vapply(args, isFALSE, logical(1))
@@ -211,7 +213,7 @@ readSpatialData <- function(x,
             if (is.numeric(opt) && opt > (. <- length(j))) 
                 stop("'", i, "=", opt, "', but only ", ., " elements found")
             if (is.character(opt) && length(. <- setdiff(opt, basename(j))))
-                stop("couln't find ", i, " of name", .)
+                stop("couldn't find ", i, " of name ", .)
             j <- j[opt]
         }
         f <- get(paste0("read", toupper(substr(i, 1, 1)), substr(i, 2, nchar(i)-1)))

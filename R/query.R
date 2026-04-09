@@ -23,6 +23,10 @@ NULL
     if (any(is.na(m)) || !identical(sort(m), seq_len(4)))
         stop("currently only supporting bounding box query;", 
             " please provide 'xmin/xmax/ymin/ymax' as ...")
+    if (args$xmin > args$xmax)
+        warning("'xmin' > 'xmax'; this will return an empty result")
+    if (args$ymin > args$ymax)
+        warning("'ymin' > 'ymax'; this will return an empty result")
 }
 
 #' @rdname query
