@@ -559,7 +559,7 @@ rbind(native=unlist(xy), scaled=unlist(yx))
 sessionInfo()
 ```
 
-    ## R Under development (unstable) (2026-06-04 r90104)
+    ## R Under development (unstable) (2026-06-05 r90111)
     ## Platform: x86_64-pc-linux-gnu
     ## Running under: Ubuntu 24.04.4 LTS
     ## 
@@ -584,9 +584,9 @@ sessionInfo()
     ##  [1] SingleCellExperiment_1.35.1 SummarizedExperiment_1.43.0
     ##  [3] Biobase_2.73.1              GenomicRanges_1.65.0       
     ##  [5] Seqinfo_1.3.0               IRanges_2.47.2             
-    ##  [7] S4Vectors_0.51.3            BiocGenerics_0.59.6        
+    ##  [7] S4Vectors_0.51.3            BiocGenerics_0.59.7        
     ##  [9] generics_0.1.4              MatrixGenerics_1.25.0      
-    ## [11] matrixStats_1.5.0           spatialdataR_0.99.42       
+    ## [11] matrixStats_1.5.0           spatialdataR_0.99.43       
     ## [13] BiocStyle_2.41.0           
     ## 
     ## loaded via a namespace (and not attached):
@@ -613,7 +613,7 @@ sessionInfo()
     ## [61] R6_2.6.1            dbplyr_2.5.2        httr2_1.2.2        
     ## [64] wk_0.9.5            textshaping_1.0.5   evaluate_1.0.5     
     ## [67] lattice_0.22-9      R.methodsS3_1.8.2   png_0.1-9          
-    ## [70] duckspatial_1.1.0   paws.common_0.8.9   bslib_0.11.0       
+    ## [70] duckspatial_1.1.1   paws.common_0.8.9   bslib_0.11.0       
     ## [73] class_7.3-23        Rcpp_1.1.1-1.1      uuid_1.2-2         
     ## [76] SparseArray_1.13.2  anndataR_1.3.0      xfun_0.58          
     ## [79] fs_2.1.0            pkgconfig_2.0.3
